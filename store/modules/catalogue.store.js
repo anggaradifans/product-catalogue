@@ -23,9 +23,10 @@ const mutations = {
 };
 
 const actions = {
-  async fetchProducts({ commit }) {
+  async fetchProducts({ commit }, variables) {
+    let query = variables ? `/products?productName=${variables}` : "/products";
     try {
-      const { data } = await this.$axios.get("/posts");
+      const { data } = await this.$axios.get(query);
       commit("setProducts", data);
     } catch (e) {
       console.log(e);
@@ -35,7 +36,7 @@ const actions = {
     commit("setLoading", true);
     const id = variables;
     try {
-      const { data } = await this.$axios.get(`/posts/${id}`);
+      const { data } = await this.$axios.get(`/products/${id}`);
       commit("setProduct", data);
     } catch (e) {
       console.log(e);

@@ -2,12 +2,19 @@
   <div @click="onClick(item.id)" class="card-container">
     <img src="@/assets/not_found.png" alt="placeholder" />
     <div class="card-text">
-      {{ item.productName }}
+      <h3>
+        {{ item.productName }}
+      </h3>
+      <h4>
+        {{ formatCurrency(item.price) }}
+      </h4>
     </div>
   </div>
 </template>
 
 <script>
+import { formatCurrency } from "@/utility";
+
 export default {
   props: {
     item: {
@@ -19,6 +26,7 @@ export default {
     onClick(id) {
       this.$emit("click", id);
     },
+    formatCurrency,
   },
 };
 </script>

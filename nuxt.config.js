@@ -15,7 +15,8 @@ export default {
   },
 
   axios: {
-    baseURL: "https://my-json-server.typicode.com/typicode/demo", // Used as fallback if no runtime config is provided
+    baseURL:
+      "https://my-json-server.typicode.com/anggaradifans/product-catalogue", // Used as fallback if no runtime config is provided
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css

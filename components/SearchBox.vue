@@ -1,12 +1,23 @@
 <template>
   <div class="search-box">
-    <input type="text" />
-    <button>Search</button>
+    <input v-model="text" type="text" />
+    <button @click="search">Search</button>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      text: "",
+    };
+  },
+  methods: {
+    search() {
+      this.$emit("search", this.text);
+    },
+  },
+};
 </script>
 
 <style lang="scss">
