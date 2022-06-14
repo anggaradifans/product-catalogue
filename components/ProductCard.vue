@@ -1,7 +1,8 @@
 <template>
-  <div class="card-container">
-    <div>
-      {{ item.title }}
+  <div @click="onClick(item.id)" class="card-container">
+    <img src="@/assets/not_found.png" alt="placeholder" />
+    <div class="card-text">
+      {{ item.productName }}
     </div>
   </div>
 </template>
@@ -14,16 +15,26 @@ export default {
       required: false,
     },
   },
+  methods: {
+    onClick(id) {
+      this.$emit("click", id);
+    },
+  },
 };
 </script>
 
-<style>
+<style lang="scss">
 .card-container {
   margin: 10px;
-  padding: 10px;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 30%);
-  box-shadow: 0px 10px 30px 0px rgb(0 0 0 / 30%);
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   background: white;
+  .card-text {
+    padding: 30px;
+  }
+  img {
+    width: 100%;
+  }
 }
 </style>
