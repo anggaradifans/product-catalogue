@@ -2,32 +2,32 @@
   "products": [
     {
       "id": 1,
-      "productName": "Product 1",
+      "productName": "Product Test 1",
       "price": 15000
     },
     {
       "id": 2,
-      "productName": "Product 2",
+      "productName": "Product Test 2",
       "price": 25000
     },
     {
       "id": 3,
-      "productName": "Product 3",
+      "productName": "Product Test 3",
       "price": 35000
     },
     {
       "id": 4,
-      "productName": "Product 4",
+      "productName": "Product Test 4",
       "price": 100000
     },
     {
       "id": 5,
-      "productName": "Product 5",
+      "productName": "Product Test 5",
       "price": 125000
     },
     {
       "id": 6,
-      "productName": "Product 6",
+      "productName": "Product Test 6",
       "price": 75000
     }
   ],
