@@ -2,6 +2,7 @@
   <div>
     <SearchBox @search="fetch" />
     <div class="container">
+      <h1>Check Our products</h1>
       <div v-for="item in products" :key="item.id">
         <ProductCard @click="goToDetailPage" :item="item" />
       </div>

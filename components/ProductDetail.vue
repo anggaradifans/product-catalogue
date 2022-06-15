@@ -9,7 +9,10 @@
         <h2>
           {{ formatCurrency(product.price) }}
         </h2>
-        <h3>Available stock : {{ product.stock || 0 }}</h3>
+        <h4>
+          {{ categoryName }}
+        </h4>
+        <h4>Available stock : {{ product.stock || 0 }}</h4>
         <p>
           {{ product.description }}
         </p>
@@ -20,7 +23,6 @@
 
 <script>
 import { formatCurrency } from "@/utility";
-import { mapGetters } from "vuex";
 
 export default {
   props: {
@@ -28,16 +30,9 @@ export default {
       type: Object,
       default: {},
     },
-  },
-  computed: {
-    ...mapGetters({
-      categories: "catalogue/getCategories",
-    }),
-    categoryName() {
-      const { name } = this.categories.find(
-        (item) => item.categoryId === this.product.categoryId
-      );
-      return name || "";
+    categoryName: {
+      type: String,
+      default: "",
     },
   },
   methods: {
