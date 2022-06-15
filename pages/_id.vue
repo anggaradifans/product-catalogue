@@ -32,10 +32,11 @@ export default {
       categories: "catalogue/getCategories",
     }),
     categoryName() {
-      const { name } = this.categories?.find(
+      if (!this.categories) return "";
+      const test = this.categories.find(
         (item) => item.categoryId === this.product.categoryId
       );
-      return name || "";
+      return test?.name || "";
     },
   },
   methods: {

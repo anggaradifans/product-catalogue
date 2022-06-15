@@ -2,7 +2,7 @@
   <ul class="breadcrumb">
     <li><nuxt-link to="/">Home</nuxt-link></li>
     <li>
-      <nuxt-link :to="`?categoryId=${categoryId}`">{{
+      <nuxt-link :to="`/?categoryId=${categoryId}`">{{
         categoryName
       }}</nuxt-link>
     </li>

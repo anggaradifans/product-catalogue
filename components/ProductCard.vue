@@ -5,9 +5,9 @@
       alt="placeholder"
     />
     <div class="card-text">
-      <h3>
+      <h4>
         {{ item.productName }}
-      </h3>
+      </h4>
       <h4>
         {{ formatCurrency(item.price) }}
       </h4>

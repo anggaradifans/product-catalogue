@@ -29,12 +29,21 @@ const mutations = {
 
 const actions = {
   async fetchProducts({ commit }, variables) {
-    let query = variables ? `/products?q=${variables}` : "/products";
+    commit("setLoading", true);
+    let queryProduct = "/products";
+    if (variables.q) {
+      queryProduct += `?q=${variables.q}`;
+    }
+    if (variables.categoryId) {
+      queryProduct += `?categoryId=${variables.categoryId}`;
+    }
     try {
-      const { data } = await this.$axios.get(query);
+      const { data } = await this.$axios.get(queryProduct);
       commit("setProducts", data);
     } catch (e) {
       console.log(e);
+    } finally {
+      commit("setLoading", false);
     }
   },
   async fetchCategories({ commit }) {

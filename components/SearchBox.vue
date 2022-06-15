@@ -1,7 +1,11 @@
 <template>
   <div class="search-box">
-    <input v-model="text" @keyup.enter="search" type="text" />
-    <button @click="search">Search</button>
+    <input
+      v-model="text"
+      placeholder="Enter product name"
+      @keyup.enter="search"
+      type="text"
+    />
   </div>
 </template>
 
@@ -14,7 +18,10 @@ export default {
   },
   methods: {
     search() {
-      this.$emit("search", this.text);
+      this.$router.push(`/?q=${this.text}`);
+      this.$emit("search", {
+        q: this.text,
+      });
     },
   },
 };

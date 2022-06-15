@@ -12,6 +12,8 @@
       "price": 15000,
       "categoryId": 1,
       "image": "covid rapid test.jpg",
+      "description": "This is Covid Rapid Antibody Test",
+      "variant": [],
       "stock": 120
     },
     {
@@ -20,6 +22,7 @@
       "categoryId": 1,
       "price": 25000,
       "image": "desinfectant.jpg",
+      "variant": ["Small", "Medium", "Large"],
       "stock": 1000
     },
     {
@@ -28,6 +31,7 @@
       "categoryId": 1,
       "price": 35000,
       "image": "disposable syringe.jpg",
+      "variant": ["Small", "Medium", "Large"],
       "stock": 150
     },
     {
@@ -36,6 +40,7 @@
       "categoryId": 1,
       "price": 100000,
       "image": "disposable-corrugated-breathing.jpg",
+      "variant": ["Small", "Medium"],
       "stock": 200
     },
     {
@@ -44,6 +49,7 @@
       "categoryId": 1,
       "price": 125000,
       "image": "gloves.jpg",
+      "variant": ["Small", "Medium", "Large", "Xtra Large"],
       "stock": 500
     },
     {
@@ -52,6 +58,7 @@
       "categoryId": 1,
       "price": 75000,
       "image": "face mask.jpg",
+      "variant": ["Black", "White"],
       "stock": 300
     }
   ],

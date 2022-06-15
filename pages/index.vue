@@ -1,8 +1,8 @@
 <template>
   <div>
-    <SearchBox @search="fetch" />
-    <div class="container">
-      <h1>Check Our products</h1>
+    <Header @search="fetch" />
+    <Loading v-if="isLoading" />
+    <div v-else class="container">
       <div v-for="item in products" :key="item.id">
         <ProductCard @click="goToDetailPage" :item="item" />
       </div>
@@ -14,12 +14,16 @@
 import { mapActions, mapGetters } from "vuex";
 import ProductCard from "@/components/ProductCard.vue";
 import SearchBox from "@/components/SearchBox.vue";
+import Header from "@/components/Header.vue";
+import Loading from "@/components/Loading.vue";
 
 export default {
   name: "IndexPage",
   components: {
     ProductCard,
     SearchBox,
+    Header,
+    Loading,
   },
   mounted() {
     this.fetch();
@@ -27,6 +31,7 @@ export default {
   computed: {
     ...mapGetters({
       products: "catalogue/getProducts",
+      isLoading: "catalogue/isLoading",
     }),
   },
   methods: {
@@ -37,8 +42,9 @@ export default {
     goToDetailPage(id) {
       this.$router.push(`/${id}`);
     },
-    fetch(query) {
+    fetch() {
       this.fetchCategories();
+      let query = this.$route.query;
       this.fetchProducts(query);
     },
   },
