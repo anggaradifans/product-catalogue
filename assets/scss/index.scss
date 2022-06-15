@@ -39,17 +39,20 @@
 
 // Product Detail
 .product-detail-container {
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  @media only screen and (min-width: 601px) {
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
   .product-detail {
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     @media only screen and (max-width: 600px) {
-      grid-template-rows: 1fr;
+      grid-template-columns: 1fr;
+      margin: 5%;
     }
     .content {
       padding: 50px 0;
