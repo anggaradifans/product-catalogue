@@ -22,8 +22,8 @@ export default {
       default: "",
     },
     categoryId: {
-      type: String,
-      default: "",
+      type: Number,
+      default: 1,
     },
   },
 };

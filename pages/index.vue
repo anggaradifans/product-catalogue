@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header @search="fetch" />
+    <Header @search="getProducts" />
     <Loading v-if="isLoading" />
     <div v-else class="container">
       <div v-for="item in products" :key="item.id">
@@ -36,7 +36,7 @@ export default {
   },
   watch: {
     "$route.query"(query) {
-      this.fetchProducts(query);
+      this.getProducts(query);
     },
   },
   methods: {
@@ -47,9 +47,13 @@ export default {
     goToDetailPage(id) {
       this.$router.push(`/${id}`);
     },
+    getProducts(params) {
+      const query = params ? params : this.$route.query;
+      this.fetchProducts(query);
+    },
     fetch(query) {
       this.fetchCategories();
-      this.fetchProducts(query);
+      this.getProducts(query);
     },
   },
 };
