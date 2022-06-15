@@ -3,6 +3,18 @@
     {
       "categoryId": 1,
       "name": "Medical Devices"
+    },
+    {
+      "categoryId": 2,
+      "name": "Household Supplies"
+    },
+    {
+      "categoryId": 3,
+      "name": "Food and Beverages"
+    },
+    {
+      "categoryId": 4,
+      "name": "Fashion"
     }
   ],
   "products": [
@@ -60,6 +72,36 @@
       "image": "face mask.jpg",
       "variant": ["Black", "White"],
       "stock": 300
+    },
+    {
+      "id": 7,
+      "productName": "Matras Protector Pelindung Kasur - KINTAKUN",
+      "price": 275000,
+      "categoryId": 2,
+      "image": "kintakun-bed.jpg",
+      "description": "Kintakun Matras Protector Pelindung Kasur. Matras Protektor Kintakun adalah Lapisan Kasur sebelum menggunakan Sprei.Matras berbentuk bedcover warna putih polos, di 4 sudut terdapat karet untuk dikaitin dikasur.Membuat kasur makin empuk karena matras protector melapisinya",
+      "variant": [],
+      "stock": 120
+    },
+    {
+      "id": 8,
+      "productName": "Krenies makanan ringan krekers brownies 60gr - Choco Cheese",
+      "price": 25000,
+      "categoryId": 3,
+      "image": "krenies.jpg",
+      "description": "KRENIES (KREkers browNIES) adalah bentuk baru dari Brownies Gaes. Kebanyakan Brownies itu bentuknya kotak besar dan kurang praktis untuk dimakan dimana saja / kapan saja. Apalagi buat kita-kita yang mobilitasnya tinggi atau suka hangout di sana-sini. Betul kaaaaan? Di jaman serba praktis ini, KRENIES hadir dengan revolusi Brownies yang bentuknya lebih praktis buat dimakan dimana aja dan kapan aja.",
+      "variant": [],
+      "stock": 120
+    },
+    {
+      "id": 8,
+      "productName": "Jilbab Bergo Elzatta Hijab Diskon Zaria Kirana",
+      "price": 85000,
+      "categoryId": 3,
+      "image": "elzatta-hijab.jpg",
+      "description": "Jilbab dengan berbagai warna",
+      "variant": ["Black", "White", "Red", "Yellow"],
+      "stock": 15
     }
   ],
   "profile": {
