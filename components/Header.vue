@@ -1,6 +1,6 @@
 <template>
   <div class="header">
-    <h1 style="text-align: center">Check Our Products</h1>
+    <h2 style="text-align: center">Check Our Products</h2>
     <SearchBox @search="fetch" />
   </div>
 </template>
