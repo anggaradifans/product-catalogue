@@ -1,34 +1,58 @@
 {
+  "categories": [
+    {
+      "categoryId": 1,
+      "name": "Medical Devices"
+    }
+  ],
   "products": [
     {
       "id": 1,
-      "productName": "Product Test 1",
-      "price": 15000
+      "productName": "Covid Rapid Test",
+      "price": 15000,
+      "categoryId": 1,
+      "image": "covid rapid test.jpg",
+      "stock": 120
     },
     {
       "id": 2,
-      "productName": "Product Test 2",
-      "price": 25000
+      "productName": "Desinfectant",
+      "categoryId": 1,
+      "price": 25000,
+      "image": "desinfectant.jpg",
+      "stock": 1000
     },
     {
       "id": 3,
-      "productName": "Product Test 3",
-      "price": 35000
+      "productName": "Disposable Syringe",
+      "categoryId": 1,
+      "price": 35000,
+      "image": "disposable syringe.jpg",
+      "stock": 150
     },
     {
       "id": 4,
-      "productName": "Product Test 4",
-      "price": 100000
+      "productName": "Disposable Corrugated Breathing",
+      "categoryId": 1,
+      "price": 100000,
+      "image": "disposable-corrugated-breathing.jpg",
+      "stock": 200
     },
     {
       "id": 5,
-      "productName": "Product Test 5",
-      "price": 125000
+      "productName": "Gloves",
+      "categoryId": 1,
+      "price": 125000,
+      "image": "gloves.jpg",
+      "stock": 500
     },
     {
       "id": 6,
-      "productName": "Product Test 6",
-      "price": 75000
+      "productName": "Face Mask",
+      "categoryId": 1,
+      "price": 75000,
+      "image": "face-mask.jpg",
+      "stock": 300
     }
   ],
   "profile": {
