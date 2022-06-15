@@ -11,9 +11,10 @@
         <h2>
           {{ formatCurrency(product.price) }}
         </h2>
-        <p>Category</p>
+        <h4>Category</h4>
         <Badge :text="categoryName" />
-        <p>Variant</p>
+        <h4>Variant</h4>
+        <p v-if="!product.variant.length">No variant</p>
         <div class="variant">
           <Badge
             v-for="(item, index) in product.variant"
@@ -22,8 +23,11 @@
           />
         </div>
         <p>Available stock : {{ product.stock || 0 }}</p>
+      </div>
+      <div class="content">
+        <h4>Description</h4>
         <p>
-          {{ product.description }}
+          {{ product.description || "There is no description for this item" }}
         </p>
       </div>
     </div>
