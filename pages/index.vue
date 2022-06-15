@@ -34,6 +34,11 @@ export default {
       isLoading: "catalogue/isLoading",
     }),
   },
+  watch: {
+    "$route.query"(query) {
+      this.fetchProducts(query);
+    },
+  },
   methods: {
     ...mapActions({
       fetchProducts: "catalogue/fetchProducts",
@@ -42,9 +47,8 @@ export default {
     goToDetailPage(id) {
       this.$router.push(`/${id}`);
     },
-    fetch() {
+    fetch(query) {
       this.fetchCategories();
-      let query = this.$route.query;
       this.fetchProducts(query);
     },
   },

@@ -8,11 +8,11 @@
   "products": [
     {
       "id": 1,
-      "productName": "Covid Rapid Test",
+      "productName": "Kasa Steril",
       "price": 15000,
       "categoryId": 1,
-      "image": "covid rapid test.jpg",
-      "description": "This is Covid Rapid Antibody Test",
+      "image": "kasa-steril.jpg",
+      "description": "Kasa steril OneMed 16 x 16cm, 1 dus isi 16pcs",
       "variant": [],
       "stock": 120
     },

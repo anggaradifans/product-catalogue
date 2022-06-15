@@ -31,10 +31,10 @@ const actions = {
   async fetchProducts({ commit }, variables) {
     commit("setLoading", true);
     let queryProduct = "/products";
-    if (variables.q) {
+    if (variables?.q) {
       queryProduct += `?q=${variables.q}`;
     }
-    if (variables.categoryId) {
+    if (variables?.categoryId) {
       queryProduct += `?categoryId=${variables.categoryId}`;
     }
     try {
